@@ -13,7 +13,7 @@ export const LoginForm = ({
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info text-center">Client Login</h1>
+          <h1 className="text-info text-center">Customer Login</h1>
           <hr />
           <Form autoComplete="off" onSubmit={handleOnSubmit}>
             <Form.Group>
