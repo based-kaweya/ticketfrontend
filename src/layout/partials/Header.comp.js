@@ -1,7 +1,7 @@
 // headercomp.js
 
 import React from "react";
-import { Navbar, Nav, NavbarBrand } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import logo from "../../assests/img/logo.jpg";
 
 export const Header = () => {
