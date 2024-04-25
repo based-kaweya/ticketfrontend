@@ -3,17 +3,19 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import tickets from "../../assests/data/dummy-tickets.json";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
+import { Link } from "react-router-dom";
 
 export const Dashboard = () => {
   return (
     <Container>
-        <Row>
+       <Row>
         <Col>
           <PageBreadcrumb page="Dashboard" />
         </Col>
       </Row>
       <Row>
         <Col className="text-center mt-5 mb-2">
+        <Link to="/add-ticket">
           <Button
             variant="info"
             style={{
@@ -24,6 +26,7 @@ export const Dashboard = () => {
           >
             Add New Ticket
           </Button>
+          </Link>
         </Col>
       </Row>
       <Row>

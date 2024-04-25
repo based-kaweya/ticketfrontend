@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-
 export const LoginForm = ({
   handleOnChange,
   handleOnSubmit,
@@ -13,6 +12,7 @@ export const LoginForm = ({
     <Container>
       <Row>
         <Col>
+         
           <h1 className="text-info text-center">Customer Login</h1>
           <hr />
           <Form autoComplete="off" onSubmit={handleOnSubmit}>
@@ -38,13 +38,11 @@ export const LoginForm = ({
                 required
               />
             </Form.Group>
-
             <Button type="submit">Login</Button>
           </Form>
           <hr />
         </Col>
       </Row>
-
       <Row>
         <Col>
           <a href="#!" onClick={() => formSwitcher("rest")}>
@@ -55,7 +53,6 @@ export const LoginForm = ({
     </Container>
   );
 };
-
 LoginForm.propTypes = {
   handleOnChange: PropTypes.func.isRequired,
   handleOnSubmit: PropTypes.func.isRequired,

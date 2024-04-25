@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { SearchForm } from "../../components/search-form/SearchForm.comp";
-import { TicketTable } from "../ticket-table/TicketTable.comp";
+import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import tickets from "../../assests/data/dummy-tickets.json";
+import { Link } from "react-router-dom";
 
 export const TicketLists = () => {
   const [str, setStr] = useState("");
@@ -33,12 +34,14 @@ export const TicketLists = () => {
       </Row>
       <Row className="mt-4">
         <Col>
-        <Button 
-            variant="info" 
-            style={{ backgroundColor: "rgba(238, 196, 0, 1)" }} 
-          >
-            Add New Ticket
-          </Button>
+          <Link to="/add-ticket">
+            <Button
+              variant="info"
+              style={{ backgroundColor: "rgba(238, 196, 0, 1)" }}
+            >
+              Add New Ticket
+            </Button>
+          </Link>
         </Col>
         <Col className="text-right">
           <SearchForm handleOnChange={handleOnChange} str={str} />
